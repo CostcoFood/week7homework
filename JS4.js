@@ -59,3 +59,39 @@ console.log(repeatWord('Hello', 3));
 const getFullName = (firstName, lastName) => `${firstName} ${lastName}`;
 console.log(getFullName('Steven', 'Guevara'));
 
+function isSumGreaterThan100(numbers) {
+    let sum = 0; 
+    for (let number of numbers) {
+        sum += number;
+    }
+    return sum > 100;
+}
+console.log(isSumGreaterThan100([5,10,15,20,25,30,35,40]))
+
+function getAverage(numbers) {
+    let sum = 0
+    for (let number of numbers) {
+        sum += number;
+    }
+    return sum / numbers.length;
+}
+console.log(getAverage([5,10,15,20,25,30,35,40,45,50]))
+
+function isFirstArrayAverageGreater(arr1, arr2) {
+    let avg1 = getAverage(arr1);
+    let avg2 = getAverage(arr2);
+    return avg1 > avg2;
+}
+console.log(isFirstArrayAverageGreater([30,60,90],[5,10,15]))
+
+function willBuyDrink(isHotOutside, moneyInPocket) {
+    return isHotOutside && moneyInPocket > 15.50;
+}
+console.log(willBuyDrink(false, 15.49))
+
+const randomNumber = [1,2,3,4,5,6,7,8,9,0]
+function getRandomNumber() {
+    const randomIndex = Math.floor(Math.random() * randomNumber.length);
+    return randomNumber[randomIndex];
+}
+console.log(getRandomNumber())
